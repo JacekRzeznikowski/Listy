@@ -31,6 +31,6 @@ public class Main {
         b.append("EFG");
         System.out.println(b);
 
-
+//dodaje komentarz
     }
 }
