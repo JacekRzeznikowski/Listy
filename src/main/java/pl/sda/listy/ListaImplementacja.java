@@ -9,7 +9,7 @@ public class ListaImplementacja implements Lista {
     private int[] liczby;// z main nie ma dostępu do danych private
     private int pojemnosc = 10;
     private int rozmiar = 0;
-    private int dlugosc = pojemnosc;
+    //private int dlugosc = pojemnosc;
 
     ListaImplementacja() {
         this.liczby = new int[pojemnosc];
@@ -41,14 +41,14 @@ public class ListaImplementacja implements Lista {
 
     }
         public int znajdz ( int liczba){
-            for (int i = 0; i < dlugosc; i++)
+            for (int i = 0; i < pojemnosc; i++)
                 if (liczby[i] == liczba)
                     return i;
             return -1;
         }
 
         public String pisz () {
-        String tekst = "Pojemność: "+dlugosc+"\nRozmiar: "+rozmiar+"\nElementy: ";
+        String tekst = "Pojemność: "+pojemnosc+"\nRozmiar: "+rozmiar+"\nElementy: ";
         for(int i = 0; i < rozmiar; i++)
             if(i != rozmiar-1)
             tekst += liczby[i]+", ";
@@ -63,7 +63,6 @@ public class ListaImplementacja implements Lista {
                 "liczby=" + Arrays.toString(liczby) +
                 ", pojemnosc=" + pojemnosc +
                 ", rozmiar=" + rozmiar +
-                ", dlugosc=" + dlugosc +
                 '}';
     }
 
@@ -82,6 +81,7 @@ public class ListaImplementacja implements Lista {
                     liczby[i + j] = liczby[i + j + 1];
                 liczby[rozmiar] = 0;
                 --rozmiar;
+                liczby = Arrays.copyOf(this.liczby,pojemnosc-1);
 
                 return true;
             }

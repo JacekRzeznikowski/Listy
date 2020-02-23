@@ -16,9 +16,9 @@ public class Main {
         System.out.println(lista.pisz());
         System.out.println("toString: "+lista.toString());
         System.out.println(lista.usunPierwszy(6));
-        System.out.println(lista.pisz());
+        System.out.println("Lista po usunięciu pierwszego: "+lista.pisz());
         lista.usunPowtorzenia();
-        System.out.println(lista.pisz());
+        System.out.println("List apo usunięciu powtórzeń: "+lista.pisz());
         lista.zapiszDoPliku(lista.pisz());
         System.out.println(lista.toString());
 //        int[] tab = new int[5];//tu mamy sposób na powiększanie tablicy
