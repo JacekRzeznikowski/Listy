@@ -1,6 +1,7 @@
 package pl.sda.listy;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -11,7 +12,7 @@ public class Main {
             lista.dodajElement(number);
         }
         System.out.println("Lista gotowa");
-        int wynik = lista.znajdz(37);
+        int wynik = lista.znajdz(6);
         System.out.println("Poszukiwana liczba znajduje sie na pozycji "+wynik);
         System.out.println(lista.pisz());
         System.out.println("toString: "+lista.toString());
@@ -30,6 +31,8 @@ public class Main {
         b.append("BCD");
         b.append("EFG");
         System.out.println(b);
+        Generyka<String> generyka = new Generyka<>();
+        generyka.wyswietl("Ala ma wirusa");
 
 //dodaje komentarz
     }
